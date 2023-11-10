@@ -13,6 +13,7 @@ function App() {
       <TechStack></TechStack>
       <About></About>
       <Project></Project>
+      <ContactMe></ContactMe>
     </div>
   );
 }
@@ -53,7 +54,7 @@ function Project(){
       coverImg:ninjable,
       url:'https://yur4ik1.github.io/html/ninjable-portal/skills.html',
       title:'Ninjable',
-      description:'Ninjable is a ninja game theme programmer learning website, where you can strengthen your ninja by learning development skills.',
+      description:'Ninjable is a ninja game theme programmer learning website, where you can strengthen your "ninja" by learning development skills.',
       techAry:['HTML + CSS','GraphQL']
 
     }
@@ -61,7 +62,7 @@ function Project(){
   return(
       <div className='mt-72 flex justify-center'>
         <div className='basis-2/3 '>
-          <p className='text-start basis-2/3 text-sky-600'>PROTFOLIO</p>
+          <p className='text-start basis-2/3 text-sky-600 font-semibold'>PROTFOLIO</p>
           <p className='text-start basis-2/3 text-black font-black text-lg'>Each projects is a unique piece of development</p>
           <ul className="projectList" id="projectList">
           {projectList.map((item,index)=>{
@@ -188,6 +189,19 @@ function Animation(){
         <span style={{'--i':21}}>P</span>
         <span style={{'--i':22}}>E</span>
         <span style={{'--i':23}}>R</span>
+      </div>
+    </div>
+  )
+}
+
+function ContactMe(){
+  return(
+    <div className='flex justify-center'>
+      <div className='basis-2/3 mt-72 flex '>
+        <p className='text-start text-sky-600 font-semibold'>Contact</p>
+        <p>Don't be shy! Hit me up!</p>
+        <div></div>
+        <div></div>
       </div>
     </div>
   )
