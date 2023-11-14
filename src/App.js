@@ -157,12 +157,12 @@ function About(){
 function Introducing(){
   return(
     <div className=' flex justify-center pt-56'>
-      <div className='basis-1/3 pt-8'>
+      <div className='basis-1/3 flex flex-col justify-center'>
         <p className='text-4xl font-semibold'>Front-end Developer</p>
         <span>Hi,I'm Yuzhi Qing. A passionate Front-end Developer based in China,Chengdu.</span>
       </div>
       <div className='basis-1/3'>
-        <div className='shadow-xl h-60 w-60 rounded-full outline outline-offset-2 outline-4 outline-cyan-500 mx-auto avatar'></div>
+        <div className='shadow-xl h-72 w-60 rounded-full  mx-auto avatar'></div>
       </div>
     </div>
   )
