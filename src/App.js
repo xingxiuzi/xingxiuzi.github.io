@@ -18,7 +18,7 @@ import email from './images/email.png'
 
 function App() {
   return (
-    <div className="App font-mono overflow-hiden">
+    <div className="App font-mono overflow-hiden w-full">
       <Header></Header>
       <Introducing></Introducing>
       <TechStack></TechStack>
@@ -37,8 +37,8 @@ function Header(){
     container.scrollTo({top: target, behavior: 'smooth'})
   }
   return(
-    <div className='px-8 h-16 flex justify-between text-xl fixed header w-full'>
-        <div className='items-center flex hover:font-extrabold cursor'>Yuzhi.Dev</div>
+    <div className='px-8 h-16 flex sm:justify-between text-xl fixed header w-full justify-evenly'>
+        <div className='items-center flex hover:font-extrabold cursor hidden sm:block'>Yuzhi.Dev</div>
         <ul className='menuList flex flex-row-reverse h-full items-center'>
           <li className='hover:font-semibold cursor-pointer' onClick={()=>handleClick('Contact')}>Contact</li>
           <li className='mr-4 hover:font-semibold cursor-pointer' onClick={()=>handleClick('Projects')}>Projects</li>
@@ -85,17 +85,17 @@ function Project(){
     }
   ]
   return(
-      <div className='mt-72 flex justify-center' id='Projects'>
-        <div className='basis-2/3 '>
+      <div className='sm:mt-72 mt-24 flex justify-center' id='Projects'>
+        <div className='sm:basis-2/3 pl-4 pr-4 sm:pl-0 sm:pr-0'>
           <p className='text-start basis-2/3 text-sky-600 font-semibold'>PROTFOLIO</p>
           <p className='text-start basis-2/3 text-black font-black text-lg'>Each projects is a unique piece of development</p>
           <ul className="projectList" id="projectList">
           {projectList.map((item,index)=>{
             if(index%2 === 0){
               return(
-                <li key={index} className='flex  mt-16'>
-                  <img src='' alt='' className='basis-2/3 overflow-hiden rounded-3xl shadow-xl bg-cover bg-top max-h-96' style={{backgroundImage:`url(${item.coverImg})`}}/>
-                  <div className='basis-1/3 ml-12 pt-12'>
+                <li key={index} className='flex flex-col sm:flex-row mt-16'>
+                  <img src='' alt='' className='sm:basis-2/3 h-48 sm:h-auto overflow-hiden rounded-3xl shadow-xl bg-cover bg-top max-h-96' style={{backgroundImage:`url(${item.coverImg})`}}/>
+                  <div className='basis-1/3 sm:ml-12 ml-0 pt-12'>
                     <div className='text-black font-black text-lg text-center'>{item.title}</div>
                     <div className='mt-8 text-center'>{item.description}</div>
                     <div className='mt-8 text-center'><RenderTech techAry={item.techAry} /></div>
@@ -108,14 +108,14 @@ function Project(){
             )
             }else{
               return(
-                <li key={index} className='flex  mt-16'>
-                  <div className='basis-1/3 mr-12 pt-12'>
+                <li key={index} className='flex flex-col-reverse sm:flex-row  mt-16'>
+                  <div className='basis-1/3 sm:mr-12 mr-0 pt-12'>
                     <div className='text-black font-black text-lg text-center'>{item.title}</div>
                     <div className='mt-8 text-center'>{item.description}</div>
                     <div className='mt-8 text-center'><RenderTech techAry={item.techAry} /></div>
                     <Live url={item.url}></Live>
                   </div>
-                  <img src='' alt='' className='basis-2/3 overflow-hiden rounded-3xl shadow-xl bg-cover bg-top max-h-96' style={{backgroundImage:`url(${item.coverImg})`}}/>
+                  <img src='' alt='' className='sm:basis-2/3 h-48 sm:h-auto overflow-hiden rounded-3xl shadow-xl bg-cover bg-top max-h-96' style={{backgroundImage:`url(${item.coverImg})`}}/>
                 </li>
             )
             }
@@ -139,12 +139,12 @@ function RenderTech(props){
 
 function About(){
   return(
-    <div className='mt-72 flex justify-center' id='About'>
-      <div className='basis-2/3 flex'>
-        <div className='basis-2/5 workTable h-60 bg-cover bg-center rounded-lg relative'>
+    <div className='sm:mt-72 mt-24 flex justify-center' id='About'>
+      <div className='sm:basis-2/3 flex'>
+        <div className='sm:basis-2/5 workTable h-60 bg-cover bg-center rounded-lg relative hidden sm:block'>
           <Animation></Animation>
         </div>
-        <div className='basis-3/5 ml-16'>
+        <div className='sm:basis-3/5 sm:ml-16 ml-0 pl-4 pr-4'>
           <div className='text-sky-600 font-semibold'>ABOUT ME</div>
           <div className='text-black font-black text-lg'>A dedicated Front-end Developer based in China,Chengdu.</div>
           <div className='text-sm mt-4'>As a Front-end Developer,I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Vue, Tailwind, and SCSS.I excel in designing and maintaining responsive websites that offer a smooth user experience.My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.</div>
@@ -156,10 +156,10 @@ function About(){
 
 function Introducing(){
   return(
-    <div className=' flex justify-center pt-56'>
-      <div className='basis-1/3 flex flex-col justify-center'>
-        <p className='text-4xl font-semibold'>Front-end Developer</p>
-        <span>Hi,I'm Yuzhi Qing. A passionate Front-end Developer based in China,Chengdu.</span>
+    <div className='flex justify-center pt-12 sm:pt-56 flex-col-reverse sm:flex-row w-full'>
+      <div className='basis-1/3 flex flex-col justify-center mt-8 sm:mt-0'>
+        <p className='text-4xl font-semibold text-center'>Front-end Developer</p>
+        <span className='text-center'>Hi,I'm Yuzhi Qing. A passionate Front-end Developer based in China,Chengdu.</span>
       </div>
       <div className='basis-1/3'>
         <div className='shadow-xl h-72 w-60 rounded-full  mx-auto avatar'></div>
@@ -170,16 +170,18 @@ function Introducing(){
 
 function TechStack(){
   return(
-    <div className='flex justify-center mt-32'>
-      <div className='basis-2/3 flex justify-start	items-center'>
-        <span className='font-semibold'>Tech Stack |</span>
-        <img src={css} alt='' className='w-8 h-8 ml-12'/>
-        <img src={html} alt='' className='w-8 h-8 ml-12'/>
-        <img src={js} alt='' className='w-8 h-8 ml-12'/>
-        <img src={php} alt='' className='w-8 h-8 ml-12'/>
-        <img src={wordpress} alt='' className='w-8 h-8 ml-12'/>
-        <img src={sass} alt='' className='w-8 h-8 ml-12'/>
-        <img src={Tailwind} alt='' className='w-8 h-8 ml-12'/>
+    <div className='flex justify-center mt-12 sm:mt-32'>
+      <div className='sm:basis-2/3 flex justify-start items-center flex-col sm:flex-row'>
+        <span className='font-semibold flex '>Tech Stack <span className="hidden sm:block ml-8">|</span></span>
+        <div className="flex justify-center mt-8 sm:mt-0">
+          <img src={css} alt='' className='w-8 h-8 sm:ml-12 '/>
+          <img src={html} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+          <img src={js} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+          <img src={php} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+          <img src={wordpress} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+          <img src={sass} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+          <img src={Tailwind} alt='' className='w-8 h-8 sm:ml-12 ml-4'/>
+        </div>
       </div>
     </div>
   )
@@ -219,20 +221,20 @@ function Animation(){
 
 function ContactMe(){
   return(
-    <div className='flex justify-center' id='Contact'>
-      <div className='basis-2/3 mt-72 flex flex-col'>
+    <div className='flex justify-start sm:justify-center pl-4 pr-4' id='Contact'>
+      <div className='basis-2/3 mt-12 sm:mt-72 flex flex-col'>
         <p className='text-start text-sky-600 font-semibold'>Contact</p>
         <p className='flex'>Don't be shy! Hit me up! <img className='w-8 h-8' src={down} alt=''/></p>
-        <div className='mt-24 flex'>
+        <div className='mt-12 sm:mt-24 flex flex-col sm:flex-row'>
           <div className='flex'>
-            <img className='w-16 h-16' src={location} alt=''/>
+            <img className='w-12 h-12 sm:w-16 sm:h-16' src={location} alt=''/>
             <div className='ml-8 flex flex-col justify-between'>
               <p className='text-sky-600 font-semibold'>location</p>
               <p>Chengdu, China</p>
             </div>
           </div>
-          <div className='flex ml-24'>
-            <img className='w-16 h-16' src={email} alt=''/>
+          <div className='flex sm:ml-24 mt-6 sm:mt-0'>
+            <img className='w-12 h-12 sm:w-16 sm:h-16' src={email} alt=''/>
             <div className='ml-8 flex flex-col justify-between'>
               <p className='text-sky-600 font-semibold'>mail</p>
               <p>qingyuzhi445019936@gmail.com</p>
@@ -264,7 +266,7 @@ function Live(props){
 
 function Footer(){
   return(
-    <div className='mt-24 rounded-lg bg-black text-white flex justify-center pt-12 pb-12'>
+    <div className='mt-12 sm:mt-24 rounded-lg bg-black text-white flex justify-center pt-12 pb-12'>
       <div className='basis-2/3'>copyright©2023. All rights are reserved</div>
     </div>
   )
