@@ -52,3 +52,38 @@
 .header{
   background-color: rgba(255, 255, 255, .5);
 }
+
+.ball1{
+  animation:hor 5.4s infinite linear alternate,
+            ver 3.4s infinite linear alternate;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ball2{
+  animation:hor 5s infinite linear alternate,
+            ver 2s infinite linear alternate;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ball3{
+  animation:hor 8s infinite linear alternate,
+            ver 4s infinite linear alternate;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+@keyframes hor{
+  to{
+    left: calc(100vw - 40px);
+  }
+}
+
+@keyframes ver{
+  to{
+    top: calc(100vh - 30px);
+  }
+}

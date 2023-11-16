@@ -19,6 +19,9 @@ import email from './images/email.png'
 function App() {
   return (
     <div className="App font-mono overflow-hiden w-full">
+      <div className='ball1 w-6 h-6 rounded-full bg-black'></div>
+      <div className='ball2 w-6 h-6 rounded-full bg-black'></div>
+      <div className='ball3 w-6 h-6 rounded-full bg-black'></div>
       <Header></Header>
       <Introducing></Introducing>
       <TechStack></TechStack>
@@ -38,7 +41,7 @@ function Header(){
   }
   return(
     <div className='px-8 h-16 flex sm:justify-between text-xl fixed header w-full justify-evenly'>
-        <div className='items-center flex hover:font-extrabold cursor hidden sm:block'>Yuzhi.Dev</div>
+        <div className='flex hover:font-extrabold cursor hidden sm:block items-center'>Yuzhi.Dev</div>
         <ul className='menuList flex flex-row-reverse h-full items-center'>
           <li className='hover:font-semibold cursor-pointer' onClick={()=>handleClick('Contact')}>Contact</li>
           <li className='mr-4 hover:font-semibold cursor-pointer' onClick={()=>handleClick('Projects')}>Projects</li>
