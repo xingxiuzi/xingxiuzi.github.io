@@ -14,6 +14,7 @@ import php from './images/php.png'
 import down from './images/down.png'
 import location from './images/location.png'
 import email from './images/email.png'
+import weChat from './images/wechat.png'
 
 
 function App() {
@@ -229,13 +230,15 @@ function ContactMe(){
         <p className='text-start text-sky-600 font-semibold'>Contact</p>
         <p className='flex'>Don't be shy! Hit me up! <img className='w-8 h-8' src={down} alt=''/></p>
         <div className='mt-12 sm:mt-24 flex flex-col sm:flex-row'>
-          <div className='flex'>
-            <img className='w-12 h-12 sm:w-16 sm:h-16' src={location} alt=''/>
+          
+          <div className='flex  mt-6 sm:mt-0'>
+            <img className='w-12 h-12 sm:w-16 sm:h-16' src={weChat} alt=''/>
             <div className='ml-8 flex flex-col justify-between'>
-              <p className='text-sky-600 font-semibold'>location</p>
-              <p>Chengdu, China</p>
+              <p className='text-sky-600 font-semibold'>WeChat</p>
+              <p>qingyz2017</p>
             </div>
           </div>
+          
           <div className='flex sm:ml-24 mt-6 sm:mt-0'>
             <img className='w-12 h-12 sm:w-16 sm:h-16' src={email} alt=''/>
             <div className='ml-8 flex flex-col justify-between'>
