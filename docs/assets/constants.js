@@ -1,24 +1,24 @@
 // 测试网的RPC地址
-const urlRPC = "https://nd-627-339-960.p2pify.com/895b0a08cd705f46d04454609c86ccab";
-const currency = "tBNB";
-const networkName = "BSC Testnet";
-const chainId = 97;
+// const urlRPC = "https://nd-627-339-960.p2pify.com/895b0a08cd705f46d04454609c86ccab";
+// const currency = "tBNB";
+// const networkName = "BSC Testnet";
+// const chainId = 97;
 
 // 测试网的相关合约地址
-const nftContractAddress = "0x31Ca971798ED144351308250398063ddd0030BD3";
-const bridgeContractAddress = "0xBE7581EF4e3191A25dA70E8A89E9ff4235B05909";
-const crossChainContractAddress = "0xe94772De860CA488Cf350add09428cC5a735360a";
+// const nftContractAddress = "0x31Ca971798ED144351308250398063ddd0030BD3";
+// const bridgeContractAddress = "0xBE7581EF4e3191A25dA70E8A89E9ff4235B05909";
+// const crossChainContractAddress = "0xe94772De860CA488Cf350add09428cC5a735360a";
 
 // 正式网的RPC地址
-// const urlRPC = "https://bsc-dataseed1.binance.org";
-// const currency = "BNB";
-// const networkName = "BSC Mainnet";
-// const chainId = 56;
+const urlRPC = "https://bsc-dataseed1.binance.org";
+const currency = "BNB";
+const networkName = "BSC Mainnet";
+const chainId = 56;
 
 // 正式网的相关合约地址
-// const nftContractAddress = "0x8554d6d21e358c37bd3e466779b4349af4a57e28";
-// const bridgeContractAddress ="0xCe92cD75f135D33802811a35Ff8F358C87Aaf3dF";
-// const crossChainContractAddress = "0xC63cECCE0f2D2d4067663F944A1AE10B218fCE00";
+const nftContractAddress = "0x8554d6d21e358c37bd3e466779b4349af4a57e28";
+const bridgeContractAddress ="0xCe92cD75f135D33802811a35Ff8F358C87Aaf3dF";
+const crossChainContractAddress = "0xC63cECCE0f2D2d4067663F944A1AE10B218fCE00";
 
 
 const nftContractABI = [
